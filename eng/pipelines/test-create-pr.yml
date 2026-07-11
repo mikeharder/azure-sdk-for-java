@@ -5,12 +5,10 @@ pool: azsdk-pool
 
 variables:
   Codeql.SkipTaskAutoInjection: true
+  skipComponentGovernanceDetection: true
 
 steps:
   - template: /eng/common/pipelines/templates/steps/sparse-checkout.yml
-    parameters:
-      Paths:
-        - "eng"
 
   - script: echo "hello world"
     displayName: Print hello world

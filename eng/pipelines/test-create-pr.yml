@@ -4,5 +4,8 @@ pr: none
 pool: azsdk-pool
 
 steps:
+  - checkout: self
+    sparseCheckoutDirectories: eng
+
   - script: echo "hello world"
     displayName: Print hello world

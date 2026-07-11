@@ -1,0 +1,8 @@
+trigger: none
+pr: none
+
+pool: azsdk-pool
+
+steps:
+  - script: echo "hello world"
+    displayName: Print hello world

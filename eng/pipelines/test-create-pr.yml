@@ -3,9 +3,14 @@ pr: none
 
 pool: azsdk-pool
 
+variables:
+  Codeql.SkipTaskAutoInjection: true
+
 steps:
-  - checkout: self
-    sparseCheckoutDirectories: eng
+  - template: /eng/common/pipelines/templates/steps/sparse-checkout.yml
+    parameters:
+      Paths:
+        - "eng"
 
   - script: echo "hello world"
     displayName: Print hello world
